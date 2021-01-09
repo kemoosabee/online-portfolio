@@ -22,7 +22,6 @@ import Experience from './experience';
 import Skills from './skills';
 import profile_pic from '../picture/profile_pic.jpg';
 import '../App.css';
-import { AvMicNone } from 'material-ui/svg-icons';
 
 const useRowStyles = makeStyles({
   root: {
