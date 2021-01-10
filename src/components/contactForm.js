@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import emailjs from 'emailjs-com';
 import Button from '@material-ui/core/Button';
-import Snackbar from '@material-ui/core/Snackbar';
-import MuiAlert from '@material-ui/lab/Alert';
 import validator from 'validator';
-import apiKeys from './apikeys';
-import apikeys from './apikeys';
 
 class ContactForm extends Component {
   constructor(props) {
@@ -14,9 +10,10 @@ class ContactForm extends Component {
     this.state = {
       name: '',
       email: '',
-      feedback: '',
+      message: '',
     };
   }
+
   handleInputChange(event) {
     event.preventDefault();
     const target = event.target;
@@ -29,25 +26,25 @@ class ContactForm extends Component {
     event.preventDefault();
 
     if (!validator.isEmail(this.state.email)) {
-      return;
+      return console.log('Wrong email adrress');
     }
 
     const templateParams = {
       from_name: this.state.name + ' (' + this.state.email + ')',
       to_name: 'Jia Liang Lee',
-      feedback: this.state.feedback,
+      message: this.state.message,
     };
 
     emailjs
       .send(
-        apikeys.SERVICE_ID,
-        apikeys.TEMPLATE_ID,
+        'service_ggywtqg',
+        'template_femwqty',
         templateParams,
-        apiKeys.USER_ID
+        'user_wlA5pEwATlcCZSwlX4V3j'
       )
       .then(
         (result) => {
-          console.log(result.text);
+          return console.log(result);
         },
         (error) => {
           console.log(error.text);
@@ -56,7 +53,7 @@ class ContactForm extends Component {
     this.setState({
       name: '',
       email: '',
-      feedback: '',
+      message: '',
     });
   }
 
@@ -94,26 +91,18 @@ class ContactForm extends Component {
           />
           <br />
           <textarea
-            id='feedback'
-            name='feedback'
+            id='message'
+            name='message'
             onChange={this.handleInputChange.bind(this)}
             placeholder='what would you like to chat about?'
             required
-            value={this.state.feedback}
+            value={this.state.message}
             style={{ width: '100%', height: '250px' }}
           />
           <br />
-          <input
-            type='button'
-            value='Send'
-            className='ui button'
-            style={{
-              fontFamily: 'Amatic SC',
-              fontSize: '20px',
-              color: 'blue',
-            }}
-            onClick={this.sendMessage.bind(this)}
-          />
+          <Button variant='outlined' onClick={this.sendMessage.bind(this)}>
+            Send
+          </Button>
         </form>
       </div>
     );

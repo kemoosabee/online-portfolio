@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
 import Radium, { StyleRoot } from 'radium';
 import { fadeIn, fadeInLeftBig } from 'react-animations';
-import profile_pic from '../picture/profile_pic.jpg';
 
 const styles = {
   bannerFadeIn: {
@@ -31,25 +30,19 @@ class Landing extends Component {
           <Grid className='landing-grid'>
             <Cell col={12}>
               <div className='avatar-toolbar-splitter'></div>
-              <img
-                style={styles.imageFadeIn}
-                src={profile_pic}
-                alt='Avatar'
-                className='avatar'
-                height='500px'
-              />
 
               <div className='banner-text' style={styles.bannerFadeIn}>
+                <h1 style={styles.textFadeIn}>Hi, </h1>
+                <h3 style={styles.textFadeIn}>My name is Jia Liang Lee </h3>
                 <h1 style={styles.textFadeIn}>Full Stack Web Developer</h1>
-                <hr />
+
                 <p style={styles.textFadeIn}>
-                  HTML/CSS | JavaScript | React | React Native | NodeJS |
-                  Express | MongoDB | SQL
+                  JavaScript | React | NodeJS | Express | MongoDB | SQL |C++
                 </p>
                 <Grid>
                   <div className='social-links' style={styles.socialFadeIn}>
                     {/* LinkedIn */}
-                    <Cell col={6}>
+                    <Cell>
                       <a
                         href='https://www.linkedin.com/in/jia-liang-lee'
                         rel='noopener noreferrer'
@@ -63,7 +56,7 @@ class Landing extends Component {
                     </Cell>
 
                     {/* Github */}
-                    <Cell col={6}>
+                    <Cell>
                       <a
                         href='https://github.com/kemoosabee'
                         rel='noopener noreferrer'

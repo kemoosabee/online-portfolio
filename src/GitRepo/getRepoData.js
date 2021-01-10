@@ -9,16 +9,10 @@ const getGit = async (username) => {
   return response.data;
 };
 
-export function GetRepoData({ userName, numOfRepos, repoLanguage }) {
+export function GetRepoData({ userName, numOfRepos }) {
   const [repoData, setRepoData] = useState([]);
   useEffect(() => {
     getGit(userName).then(setRepoData);
   }, [userName]);
-  return (
-    <DisplayRepo
-      repoLanguage={repoLanguage}
-      numOfRepos={numOfRepos}
-      repoData={repoData}
-    />
-  );
+  return <DisplayRepo numOfRepos={numOfRepos} repoData={repoData} />;
 }
