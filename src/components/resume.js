@@ -176,31 +176,31 @@ function createData(year, school, date) {
         modules: [
           {
             module: 'Concurrent Programming',
-            score: 80,
+            score: 'Not yet graded',
             description:
               'Concurrent Programming Abstraction and Java Threads, the Mutual Exclusion Problem, Semaphores, Models of Concurrency, Deadlock, Safety and Liveness Properties. Notions are exemplified through a selection of concurrent objects such as Linked Lists, Queues and Hash Maps. Principles of graph analytics, experimental performance evaluation, application of concurrent programming to graph analytics.',
           },
           {
             module: 'Advanced Computer Architecture',
-            score: 70,
+            score: 'Not yet graded',
             description:
               'This course is a study of the evolution of computer architecture and the factors influencing the design of hardware and software elements of computer systems. Topics may include performance issues and evaluation, instruction sets, processor micro-architecture and pipelining (basic design, hazards and speculation), caches, operating system support (virtual memory, exceptions, interrupts), in-order and out-of-order execution, parallel architectures and fault tolerance. As computer scientists or software engineers understanding how a computer works and what techniques can be used to accelerate its performance is essential. The course will prepare students for jobs in the computer engineering industry and can act as a springboard to more advanced material in graduate-level courses',
           },
           {
             module: 'Software Engineering Project',
-            score: 70,
+            score: 'Not yet graded',
             description:
               'Team Project involving the development and construction of an Information Technology solution with each team member responsible for the development and construction of a sub-section of the completed solution.  Promotion and demonstration of the completed solutions to judges, peers and representatives of the computing profession. A project requiring the construction of a software system (specification, user interface design, system design, realization of system design and associated testing).',
           },
           {
             module: 'Malware Analysis',
-            score: 70,
+            score: 'Not yet graded',
             description:
               'Basic Static Techniques; Cyber Security Overview; Malware Analysis in Virtual Machines; Basic dynamic analysis; X86 Disassembly; IDA Pro; Recognising C Code Constructs in Assembly; Malware Types; Analyzing Malicious Window Programs; Covert Malware Launching; Malware Behaviour and Signatures; Machine learning for malware detection',
           },
           {
             module: 'Cloud Computing',
-            score: 70,
+            score: 'Not yet graded',
             description:
               'The Cloud Computing module will provide an opportunity for you to learn about and explore a wide range of concepts, technologies, providers, and applications of cloud computing. Initially the module will focus on concepts including how we design, deploy, and manage cloud software and infrastructure to ensure both high availability and elastic scaling (being able to go from thousands of users to millions of users seamlessly). You will learn in detail how software can be developed in such a way as to easily allow (or not) cloud deployment including concepts of functional and stateless programming. After covering general concepts and generic technologies such as containerisation for micro-services, virtualisation, and devops pipelines, the module moves on to look at specific modern cloud providers such as AWS, GCP, and Azure. You will examine the differences between these platforms, learn how to deploy to them, and also gain experience of meta tools which are platform-agnostic and can be used to specify and manage cloud estates covering multiple providers.',
           },
